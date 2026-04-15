@@ -175,6 +175,25 @@ Tested using Postman:
 * Fetch orders
 * View dashboard
 
-Screenshots attached in submission.
 
----
+## 📸 Screenshots
+
+### Create Order
+![Create Order]
+<img width="901" height="862" alt="create-order" src="https://github.com/user-attachments/assets/ae2f7e3b-f17f-49fb-8851-e9e76f7789ba" />
+
+
+### Update Status
+![Update Status]
+<img width="908" height="845" alt="update-status" src="https://github.com/user-attachments/assets/fe9d881e-dc09-40bb-98fb-06cfef60c6d9" />
+
+
+### Get Orders
+![Get Orders]
+<img width="908" height="897" alt="get-orders" src="https://github.com/user-attachments/assets/1ddfc9df-2871-4720-90ad-68ae10a746a3" />
+
+
+### Dashboard
+![Dashboard]
+<img width="909" height="742" alt="dashboard" src="https://github.com/user-attachments/assets/5ce54422-2124-4450-ba94-54232b88fe2a" />
+
