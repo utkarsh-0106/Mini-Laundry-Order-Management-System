@@ -3,11 +3,20 @@
 ## 📌 Overview
 
 This is a simple backend system for managing laundry/dry cleaning orders.
-It allows creating orders, tracking their status, and viewing business insights.
+It allows users to create orders, track their status, and view business insights through a dashboard.
 
 ---
 
-## 🚀 Tech Stack
+## 🚀 Key Features
+
+* Create orders with automatic billing calculation
+* Update order status (RECEIVED → PROCESSING → READY → DELIVERED)
+* View all orders with filtering and search
+* Dashboard with total orders, revenue, and status breakdown
+
+---
+
+## 🛠️ Tech Stack
 
 * Node.js
 * Express.js
@@ -48,9 +57,9 @@ http://localhost:3000
 
 ### 1. Create Order
 
-* Add customer name & phone
+* Add customer name and phone number
 * Add garments with quantity
-* Auto-calculates total bill
+* Automatically calculates total bill
 * Generates unique order ID
 
 ---
@@ -64,15 +73,13 @@ Supported statuses:
 * READY
 * DELIVERED
 
-Update status using API
-
 ---
 
 ### 3. View Orders
 
-* Get all orders
+* Retrieve all orders
 * Filter by status
-* Search by name or phone
+* Search by customer name or phone number
 
 ---
 
@@ -90,17 +97,32 @@ Update status using API
 
 POST `/orders`
 
-### Update Status
+### Update Order Status
 
 PATCH `/orders/:id/status`
 
-### Get Orders
+### Get All Orders
 
 GET `/orders`
 
 ### Dashboard
 
 GET `/dashboard`
+
+---
+
+## 📬 Sample Request (Create Order)
+
+```json
+{
+  "customerName": "Rahul",
+  "phone": "9876543210",
+  "garments": [
+    { "type": "shirt", "quantity": 2 },
+    { "type": "pants", "quantity": 1 }
+  ]
+}
+```
 
 ---
 
@@ -131,11 +153,11 @@ GET `/dashboard`
 
 ---
 
-### Where AI Was Incorrect / Needed Fixes
+### Where AI Needed Improvement
 
 * Missing input validation
-* Incorrect HTTP method usage
-* Needed manual debugging for request handling
+* Incorrect HTTP method usage in some cases
+* Required manual debugging for request handling
 
 ---
 
@@ -144,25 +166,45 @@ GET `/dashboard`
 * Added validation checks
 * Ensured correct API methods (GET, POST, PATCH)
 * Cleaned and structured code
-* Tested all endpoints properly
+* Fully tested all endpoints
 
 ---
 
 ## ⚖️ Tradeoffs
 
-* Used in-memory storage (data resets on restart)
+* Used in-memory storage (data resets on server restart)
 * No authentication implemented
-* No frontend UI
+* No frontend UI included
 
 ---
 
 ## 🔮 Future Improvements
 
-* Add database (MongoDB)
+* Add database (MongoDB / SQL)
 * Build frontend UI
 * Add authentication system
 * Add estimated delivery date
 * Deploy the application
+
+---
+
+## 📸 Screenshots
+
+### Create Order
+
+![Create Order](https://github.com/user-attachments/assets/ae2f7e3b-f17f-49fb-8851-e9e76f7789ba)
+
+### Update Status
+
+![Update Status](https://github.com/user-attachments/assets/fe9d881e-dc09-40bb-98fb-06cfef60c6d9)
+
+### Get Orders
+
+![Get Orders](https://github.com/user-attachments/assets/1ddfc9df-2871-4720-90ad-68ae10a746a3)
+
+### Dashboard
+
+![Dashboard](https://github.com/user-attachments/assets/5ce54422-2124-4450-ba94-54232b88fe2a)
 
 ---
 
@@ -175,25 +217,8 @@ Tested using Postman:
 * Fetch orders
 * View dashboard
 
+---
 
-## 📸 Screenshots
+## ✅ Conclusion
 
-### Create Order
-![Create Order]
-<img width="901" height="862" alt="create-order" src="https://github.com/user-attachments/assets/ae2f7e3b-f17f-49fb-8851-e9e76f7789ba" />
-
-
-### Update Status
-![Update Status]
-<img width="908" height="845" alt="update-status" src="https://github.com/user-attachments/assets/fe9d881e-dc09-40bb-98fb-06cfef60c6d9" />
-
-
-### Get Orders
-![Get Orders]
-<img width="908" height="897" alt="get-orders" src="https://github.com/user-attachments/assets/1ddfc9df-2871-4720-90ad-68ae10a746a3" />
-
-
-### Dashboard
-![Dashboard]
-<img width="909" height="742" alt="dashboard" src="https://github.com/user-attachments/assets/5ce54422-2124-4450-ba94-54232b88fe2a" />
-
+This project was built with a focus on speed, simplicity, and effective use of AI tools to accelerate development while maintaining clarity and functionality.
